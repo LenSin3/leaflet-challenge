@@ -47,10 +47,8 @@ function getDepth(d) {
 function createCircleMarker( feature, latlng ){
   
   let options = {
-    // radius: 8,
     radius: getRadius(feature),
     fillColor: getDepth(feature.geometry.coordinates[2]),
-     
     color: "black",
     weight: 1,
     opacity: 1,
@@ -67,6 +65,12 @@ d3.json(link, function(data) {
   console.log(data);
   // Create a GeoJSON layer with retrieved data
   L.geoJson(data, {
+    pointToLayer: createCircleMarker,
+    onEachFeature: function(feature, layer) {
+        layer.bindPopup("Location: " + feature.properties.place + "<br>" +
+        "Date: "  + moment(feature.properties.time).format("LL h:mm:ss") + "<br>" +
+        "Magnitude: " + feature.properties.mag);
+    }
 
   }).addTo(myMap);
 })
