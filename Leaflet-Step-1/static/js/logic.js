@@ -18,6 +18,29 @@ function getRadius (feature) {
   return feature.properties.mag * 3;
 }
 
+// Function to customize color intensity
+function getDepth(d) {
+  var d;
+  if (d <= 10) {
+      return "#1a9850";
+  }
+  else if (d > 10 && d <= 30) {
+      return "#91cf60";
+  }
+  else if (d > 30 && d <= 50) {
+      return "#d9ef8b";
+  }
+  else if (d > 50 && d <= 70) {
+      return "#fee08b";
+  }
+  else if (d > 70 && d <= 90) {
+      return "#fc8d59";
+  }
+  else {
+      return "#d73027";
+  }
+       
+}
 
 
 // This will be run when L.geoJSON creates the point layer from the GeoJSON data.
