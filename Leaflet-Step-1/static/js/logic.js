@@ -13,6 +13,13 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{
   accessToken: API_KEY
 }).addTo(myMap);
 
+// Function to customize radius
+function getRadius (feature) {
+  return feature.properties.mag * 3;
+}
+
+
+
 // This will be run when L.geoJSON creates the point layer from the GeoJSON data.
 function createCircleMarker( feature, latlng ){
   
