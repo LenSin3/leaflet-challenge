@@ -13,6 +13,23 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{
   accessToken: API_KEY
 }).addTo(myMap);
 
+// This will be run when L.geoJSON creates the point layer from the GeoJSON data.
+function createCircleMarker( feature, latlng ){
+  
+  let options = {
+    // radius: 8,
+    radius: getRadius(feature),
+    fillColor: getDepth(feature.geometry.coordinates[2]),
+     
+    color: "black",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+  }
+  return L.circleMarker( latlng, options );
+}
+
+
 // Use this link to get the geojson data.
 var link = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
