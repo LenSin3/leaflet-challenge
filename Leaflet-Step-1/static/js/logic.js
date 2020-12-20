@@ -66,11 +66,19 @@ d3.json(link, function(data) {
   // Create a GeoJSON layer with retrieved data
   L.geoJson(data, {
     pointToLayer: createCircleMarker,
+    /*
     onEachFeature: function(feature, layer) {
         layer.bindPopup("Location: " + feature.properties.place + "<br>" +
         "Date: "  + moment(feature.properties.time).format("LL h:mm:ss") + "<br>" +
         "Magnitude: " + feature.properties.mag);
     }
+    */
+   onEachFeature: function(feature, layer) {
+    layer.bindPopup("<h3>" + feature.properties.place +
+    "</h3><hr><p>" + new Date(feature.properties.time) + "</p><hr><p>" +
+    "Magnitude: " + feature.properties.mag + "</p>");
+}
+
 
   }).addTo(myMap);
 })
