@@ -12,3 +12,14 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{
   id: "light-v10",
   accessToken: API_KEY
 }).addTo(myMap);
+
+// Use this link to get the geojson data.
+var link = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+
+d3.json(link, function(data) {
+  console.log(data);
+  // Create a GeoJSON layer with retrieved data
+  L.geoJson(data, {
+
+  }).addTo(myMap);
+})
