@@ -22,22 +22,22 @@ function getRadius (feature) {
 function getDepth(d) {
   var d;
   if (d <= 10) {
-      return "#1a9850";
+      return "#d4e82b";
   }
   else if (d > 10 && d <= 30) {
-      return "#91cf60";
+      return "#e3ba1c";
   }
   else if (d > 30 && d <= 50) {
-      return "#d9ef8b";
+      return "#ed9c12";
   }
   else if (d > 50 && d <= 70) {
-      return "#fee08b";
+      return "#f5850a";
   }
   else if (d > 70 && d <= 90) {
-      return "#fc8d59";
+      return " #fa7505";
   }
   else {
-      return "#d73027";
+      return "#ff6600";
   }
        
 }
