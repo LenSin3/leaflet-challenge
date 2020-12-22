@@ -1,24 +1,3 @@
-/*
-return "rgb(240, 107, 107)" 
-    } else {
-        if (mag > 4) {
-            return "rgb(240, 167, 107)"
-        } else {
-            if (mag > 3) {
-                return "rgb(243, 186, 77)"
-            } else {
-                if (mag > 2) {
-                    return "rgb(243, 219, 77)"
-                } else {
-                    if (mag > 1) {
-                        return "rgb(226, 243, 77)"
-                    } else {
-                        return "rgb(183, 243, 77)"
-*/
-
-
-
-
 
 // Earthquakes
 // Function to customize radius

@@ -2,7 +2,7 @@
 var myMap = L.map("map", {
   center: [34.0522, -118.2437],
   zoom: 5,
-  //layers: [lightmap]
+  
 });
 
 // Create the tile layer that will be the background of our map
