@@ -1,5 +1,7 @@
 # leaflet-challenge
 
+[Link to Map](https://lensin3.github.io/leaflet-challenge/)
+
 ## **Visualizing Earthquake Data**
 
 This project visualizes weekly earthquake data from USGS, agency responsible for providing scientific data about natural hazards, the health of our ecosystems and environment; and the impacts of climate and land-use change.
